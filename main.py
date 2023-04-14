@@ -29,7 +29,8 @@ def arg_parse():
                         help="number of threads to load the knowledge graph")
     parser.add_argument('--sampling_mode', type=str, default='normal',
                         help='knowledge graph sampling mode, possible are `normal`, `link`')
-    parser.add_argument('--neg_ent', type=int, default=0)
+    parser.add_argument('--neg_ent', type=int, default=1,
+                        help="number of negative entities for each triple. Note that it must >=1 to make sure that training dataset includes all entities")
     parser.add_argument('--neg_rel', type=int, default=0)
     parser.add_argument('--bern_flag', type=bool, default=True,
                         help='bern flag, possible are True, False')
